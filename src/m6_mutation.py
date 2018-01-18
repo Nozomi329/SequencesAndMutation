@@ -129,14 +129,17 @@ def RETURN_replace_negatives_by_zeros(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+    # DONE: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
-    new = numbers
-    for k in range(len(new)):
-        if new[k] < 0:
-            new[k] = 0
+    new = []
+    for k in range(len(numbers)):
+        if numbers[k] >= 0:
+            new = new + [numbers[k]]
+
+        elif numbers[k] < 0:
+            new = new + [0]
 
     return new
 
